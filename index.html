@@ -1,293 +1,179 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perpustakaan UNAIR</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERPUSTAKAAN UNAIR</title>
     <style>
-        body {
-            background-image: url("picture/Logo-Branding-UNAIR-biru.png");
-            background-size: cover;
-            color: black;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+        /* Gaya untuk navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
         }
-        h1 {
-            color: blue;
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
             text-align: center;
-            text-decoration: underline;
+            padding: 14px 16px;
+            text-decoration: none;
         }
-        h2, h3, h4, h5, h6 {
-            color: darkblue;
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
         }
-        p {
-            color: red;
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
         }
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
+
+        .dropdown .dropbtn {
+            font-size: 16px; 
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
         }
-        .section1 {
-            background-color: yellow;
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
-        .section2 {
-            background-color: lightgreen;
-        }
-        .section3 {
-            background-color: lightcoral;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
             text-align: left;
         }
-        th {
-            background-color: lightgray;
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Untuk isi selain link, misalnya teks atau informasi */
+        .dropdown-content p {
+            padding: 12px 16px;
+            color: black;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Perpustakaan UNAIR</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#pemesanan">Pemesanan Buku</a></li>
-                <li><a href="#perpanjangan">Perpanjangan Buku</a></li>
-                <li><a href="#tabel">Tabel Bahan Buku</a></li>
-                <li><a href="#anggota">Anggota Perpustakaan</a></li>
-            </ul>
+<div class="navbar">
+    <a href="#home">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">media </button>
+        <div class="dropdown-content">
+            <a href="#video">video</a>
+            <a href="#  logo perusahaan UNAIR "> logo perusahaan UNAIR </a>
+            <a href="#audio">audio</a>
+     
         </div>
-    </nav>
-<section id="home" class="section1">
-        <h1>Perpustakaan UNAIR</h1>
-        <h2>Selamat Datang di Web Perpustakaan UNAIR</h2>
-        <p>METHEWU MIKHA 222201015 <i>web</i> ini adalah web pertama saya</p>
-        <h3>Berikut ini adalah gambar dari gedung Perpustakaan UNAIR </h3>
-        <img src="https://images.app.goo.gl/6iGMYRR9wsHjUov98" 
-     alt="Gedung Perpustakaan UNAIR" 
-     class="img-responsive center-block" 
-     style="max-width: 80%; height: auto;" />
-    </h4>
-    <p style="margin-bottom: 50px">
-        <h5 style="text-center"><i>Perpustakaan UNAIR</i></h5>
-    </p>
-   <div class="text-center">
-      <iframe width="560" height="315" src="https://youtu.be/aI94w6gCFzw?si=tszjUGF1E6iUuMEB=MZnc00nOnOfrv1wl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-   </div>
+    </div>
 
-    <p style="text-center"><h6>AUDIO</h6></p>
-    <p style="margin-bottom: 50px">
-        <div class="text-center">
-            <audio controls>
-                <source src="music/town-10169.mp3" type="audio/mpeg">
-            </audio>
+    <!-- Dropdown untuk Layanan Perpustakaan -->
+    <div class="dropdown">
+        <button class="dropbtn">Layanan</button>
+        <div class="dropdown-content">
+            <a href="#formulir Perpanjangan buku peminjaman">Perpanjangan Peminjaman Buku</a>
+            <a href="#pengembalian">formulir pemesanan buku </a>
+            <a href="#formulir">formulir anggota perpustkaan </a>
+            <a href="#table buku">table buku</a>
+
         </div>
-    </p>  
-    </section>
+    </div>
 
-    <section id="pemesanan" class="section2">
-        <h2>Formulir Pemesanan Buku</h2>
-        <form>
-            <table>
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Anggota Perpustkaan:</td>
-                    <td><input type="password" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Telepon:</td>
-                    <td><input type="number" name="Nomor Telepon" placeholder="+62..." /></td>
-                </tr>
-                <tr>
-                    <td>Jenis Kelamin:</td>
-                    <td>
-                        <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
-                        <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="2">Detail Pemesanan</th>
-                </tr>
-                <tr>
-                    <td>Judul Buku Yang Dipesan:</td>
-                    <td><input type="text" name="Judul Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Penulis Buku:</td>
-                    <td><input type="text" name="Penulis Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor ISBN:</td>
-                    <td><input type="number" name="Nomor ISBN" /></td>
-                </tr>
-                <tr>
-                    <td>Tanggal Pemesanan:</td>
-                    <td><input type="date" name="Tanggal Pemesanan" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" name="submit" value="Kirim" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </section>
+    <!-- Dropdown untuk Informasi -->
+    <div class="dropdown">
+        <button class="dropbtn">Informasi</button>
+        <div class="dropdown-content">
+            <a href="#jadwal">Jadwal Buka Perpustakaan</a>
+            <a href="#event">Event dan Kegiatan</a>
+            <a href="#kontak">Kontak Kami</a>
+            <p>Alamat: Jl. Perpustakaan No.1</p>
+            <p>Telepon: (021) 123-4567</p>
+        </div>
+    </div>
+</div>
 
-    <section id="perpanjangan" class="section3">
-        <h2>Formulir Perpanjangan Peminjaman Buku</h2>
-        <form>
-            <table>
-                <tr>
-                    <td>Nama Lengkap:</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor Anggota Perpustakaan:</td>
-                    <td><input type="password" /></td>
-                </tr>
-                <tr>
-                    <td>e-mail:</td>
-                    <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-                </tr>
-                <tr>
-                    <th colspan="2">Detail Pemesanan Awal</th>
-                </tr>
-                <tr>
-                    <td>Judul Buku Yang Dipesan:</td>
-                    <td><input type="text" name="Judul Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Penulis Buku:</td>
-                    <td><input type="text" name="Penulis Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Nomor ISBN:</td>
-                    <td><input type="number" name="Nomor ISBN" /></td>
-                </tr>
-                <tr>
-                    <th colspan="2">Perpanjangan Peminjaman Buku</th>
-                </tr>
-                <tr>
-                    <td>Tanggal Perpanjangan Peminjaman Buku:</td>
-                    <td><input type="date" name="Tanggal Pemanjang Peminjaman Buku" /></td>
-                </tr>
-                <tr>
-                    <td>Alasan Perpanjangan:</td>
-                    <td><input type="text" name="Alasan Perpanjangan" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" name="submit" value="Kirim" />
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </section>
-    
-    <section id="tabel" class="section1">
-        <h2>Tabel Bahan Buku</h2>
-        <table>
-            <tr>
-                <th>No.</th>
-                <th>Judul Buku</th>
-                <th>Pengarang</th>
-                <th>Penerbit</th>
-                <th>Tahun Terbit</th>
-                <th>Jumlah Halaman</th>
-                <th>ISBN</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>"Mikologi dasar dan terapan"</td>
-                <td>Indrawati Ganjar</td>
-                <td>Yayasan Obor Indonesia</td>
-                <td>2006</td>
-                <td>235</td>
-                <td>979-461-616-8</td>
-            </tr><td>Family Business : from ABC to MBA edisi 2 </td>
-<td>Daud Tjondrorahardja
-</td>
-<td>Yogyakarta </td>
-<td> 2021</td>
-<td> 75</td>
-<td> 9786236476055</td>
+</body>
 
-</tr>
+<head>
+<body>
+    <h1>Perpustakaan Universitas Airlangga</h1>
+</body>
+
+<body>
+  <h1>Perkenalan</h1>
+  <p>
+   Perkenalan Saya METHEWU MIKHA dengan Nim 222201015.ini adalah perpustakaan homepage pertama saya ,karena saya baru belajar tentang cara membuat website perpustakaan unair.berikut ini adalah gambar dari Gedung perpustakaan unair
+  <p>Untuk lebih lengkapnya website perpustakaan, silakan buka:
+            <a href="PERPUSTAKAAN UNAIR.html">website perpustakaan unair</a>
+        </p>
+
+</body>
+   <a href="#video">PERPUSTAKAAN UNAIR</a>
+  
+<head>
+    <title>PERPUSTAKAAN UNAIR</title>
+</head>
+<body>
+
+    <img src="perpus-depan.jpeg" alt="Logo perpustakaan">
+    <p>Perpustakaan UNAIR</p>
+
+</body>
+ <a href="#video">video</a>
+<head>
+    <title>Video Perpustakaan UNAIR</title>
+</head>
+<body>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/aI94w6gCFzw?si=UCwT2HtAJdlTQdF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <source src="video.mp4" type="video/mp4">
+
+    </video>
+</body>
+       <a href="#video">AUDIO</a>     
+<head>
+  <meta charset="UTF-8">
+  <title>Contoh Audio di HTML</title>
+</head>
+   <a href="#">MEDIA</a>   
+<body>
+  <h1>Audio</h1>
+  <audio controls>
+    <source src="town-10169.mp3 " type="audio/mpeg">
+    Browsermu tidak mendukung tag audio, upgrade donk!
+  </audio>
+</body>
+  </div>
+</div>
+</body>
+<body>
+<table border="1">
 <tr>
-<d></td>
-<td>Maqashid ekonomi syariah : tujuan dan aplikasi
-</td>
-<td> Moh. Mufid
-</td>
-<td> Malang : Empatdua Media
-</td>
-<td>2018</td>
-<td>216</td>
-<td>9786025192753</td>
+<body>
+    <h1>Formulir Anggota Perpustakaan</h1>
+</body>
 
-
-</tr>
-<tr>
-<d></td>
-<td>Evaluasi calon mudharib untuk pembiayaan mudharabah</td>
-<td> Hendry Herijanto Oejoen Dt. Rajo Hitam</td>
-<td>Salemba Empat </td>
-<td>2023</td>
-<td>310</td>
-<td>9786231810427</td>
-
-
-</tr>
-
-<tr>
-<td>Politik ekonomi Indonesia : lanskap dan dinamika kontemporer </td>
-<td>Asmiati Abdul Malik </td>
-<td>Intrans Publishing </td>
-<td>2020 </td>
-<td>296 </td>
-<td>9786236709030 </td>
-
-
-
-
-</tr>
-</tr>
-<tr>
-<d></td>
-<td>Tata kelola sistem inovasi nasional </td>
-<td>Prakoso Bhairawa Putera  </td>
-<td>LIPI Press </td>
-<td>2014</td>
-<td>232</td>
-<td>9789797997915</td>
-
-
-</table>  
-  </section>
-
-    <section id="anggota" class="section2">
-        <h2>Formulir Anggota Perpustakaan </h2>
-        <form><body>
+<body>
 
 <tr>
 <td>Nama Lengkap</td>
@@ -362,13 +248,238 @@
 </tr>
 
 </table>
-        </form>
-    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+</table>
+<body>
+<table border="1">
+<tr>
+<body>
+    <h1>Tabel Bahan Buku</h1>
 </body>
 
+<body>
+<th> Judul Buku</th>
+<th>Pengarang</th>
+<th>Penerbit</th>
+<th>tahun terbit</th>
+<th>jumlah halaman</th>
+<th>ISBN</th>
+</tr>
+<tr>
+<td>Family Business : from ABC to MBA edisi 2 </td>
+<td>Daud Tjondrorahardja
+</td>
+<td>Yogyakarta </td>
+<td> 2021</td>
+<td> 75</td>
+<td> 9786236476055</td>
+
+</tr>
+<tr>
+<d></td>
+<td>Maqashid ekonomi syariah : tujuan dan aplikasi
+</td>
+<td> Moh. Mufid
+</td>
+<td> Malang : Empatdua Media
+</td>
+<td>2018</td>
+<td>216</td>
+<td>9786025192753</td>
+
+
+</tr>
+<tr>
+<d></td>
+<td>Evaluasi calon mudharib untuk pembiayaan mudharabah</td>
+<td> Hendry Herijanto Oejoen Dt. Rajo Hitam</td>
+<td>Salemba Empat </td>
+<td>2023</td>
+<td>310</td>
+<td>9786231810427</td>
+
+
+</tr>
+
+<tr>
+<td>Politik ekonomi Indonesia : lanskap dan dinamika kontemporer </td>
+<td>Asmiati Abdul Malik </td>
+<td>Intrans Publishing </td>
+<td>2020 </td>
+<td>296 </td>
+<td>9786236709030 </td>
+
+
+
+
+</tr>
+</tr>
+<tr>
+<d></td>
+<td>Tata kelola sistem inovasi nasional </td>
+<td>Prakoso Bhairawa Putera  </td>
+<td>LIPI Press </td>
+<td>2014</td>
+<td>232</td>
+<td>9789797997915</td>
+
+
+</table>
+
+<body>
+<table border="1">
+<tr>
+<body>
+    <h1>Formulir Pemesanan Buku</h1>
+</body>
+
+<body>
+
+<tr>
+<td>Nama Lengkap</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Nomor Anggota Perpustakaan</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>e-mail</td>
+<td>:</td>
+<td><textarea cols="22" rows="3" ></textarea></td>
+</tr>
+
+<tr>
+<td>Jenis Kelamin</td>
+<td>:</td>
+<td><input type="radio" name='jenis_kelamin' value='pria'/>Pria
+<input type="radio" name='jenis_kelamin' value='perempuan'/>Perempuan</td>
+</tr>
+<tr>
+<td>No.hp</td>
+<td>:</td>
+<td><input type="numer"></td>
+</tr>
+
+<tr>
+     <th colspan="3">Detail Pemesanan</th>
+        </tr>
+
+<body>
+<td>judul buku</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+
+<td>Penulis Buku</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+
+<td>Nomor ISBN</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+
+<td>Tanggal Pemesanan</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="submit" name="submit" value="Simpan"/>
+<input type="reset" name="reset" value="Batal" /></td>
+</tr>
+
+</table>
+
+
+
+</table>
+<table>
+<tr>
+<body>
+<table border="1">
+<tr>
+<body>
+    <h1>Formulir Perpanjangan  Peminjaman Buku</h1>
+</body>
+
+<body>
+
+<tr>
+<td>Nama Lengkap</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td> Nomor Anggota Perpustakaan </td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Tanggal Peminjaman </td>
+<td>:</td>
+<td><textarea cols="22" rows="3" ></textarea></td>
+</tr>
+
+<tr>
+<td>email</td>
+<td>:</td>
+<td><input type="email"></td>
+
+</tr>
+
+
+<tr>
+<td>No.hp</td>
+<td>:</td>
+<td><input type="numer"></td>
+</tr>
+
+<tr>
+<td>No ISBN</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td>Tanggal Perpanjangan Buku</td>
+<td>:</td>
+<td><input type="text"></td>
+</tr>
+
+
+
+
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="submit" name="submit" value="Simpan"/>
+<input type="reset" name="reset" value="Batal" /></td>
+</tr>
+
+    </body>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+ 
+</body>
 
 
   
