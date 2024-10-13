@@ -1,98 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PERPUSTAKAAN UNAIR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perpustakaan UNIMED</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Gaya untuk navbar */
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
+        body {
+            background-image: url("picture/Winners 2013.jpeg");
+            background-size: cover;
+            color: black;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
         }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
+        h1 {
+            color: blue;
             text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
+            text-decoration: underline;
         }
-
-        .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #ddd;
-            color: black;
+        h2, h3, h4, h5, h6 {
+            color: darkblue;
         }
-
-        .dropdown {
-            float: left;
-            overflow: hidden;
+        p {
+            color: red;
         }
-
-        .dropdown .dropbtn {
-            font-size: 16px; 
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
+        .section1 {
+            background-color: yellow;
         }
-
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
+        .section2 {
+            background-color: lightgreen;
+        }
+        .section3 {
+            background-color: lightcoral;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
             text-align: left;
         }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Untuk isi selain link, misalnya teks atau informasi */
-        .dropdown-content p {
-            padding: 12px 16px;
-            color: black;
+        th {
+            background-color: lightgray;
         }
     </style>
 </head>
 <body>
 
-<div class="navbar">
-    <a href="#home">Home</a>
-    <div class="dropdown">
-        <button class="dropbtn">media </button>
-        <div class="dropdown-content">
-     
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Perpustakaan UNAIR</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#pemesanan">Pemesanan Buku</a></li>
+                <li><a href="#perpanjangan">Perpanjangan Buku</a></li>
+                <li><a href="#tabel">Tabel Bahan Buku</a></li>
+                <li><a href="#anggota">Anggota Perpustakaan</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <!-- Dropdown untuk Layanan Perpustakaan -->
-    <div class="dropdown">
-        <button class="dropbtn">Layanan</button>
-        <div class="dropdown-content">
 
-        </div>
-    </div>
-</nav>
 
 
     <section id="home" class="section1">
