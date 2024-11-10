@@ -4,534 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perpustakaan UNAIR</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <!-- CSS Bootstrap dan jQuery UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <style>
         body {
-            background-image: url("picture/Winners 2013.jpeg");
-            background-size: cover;
-            color: black;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            color: blue;
+        header {
+            background-color: #00509E;
+            color: white;
+            padding: 10px;
             text-align: center;
-            text-decoration: underline;
         }
-        h2, h3, h4, h5, h6 {
-            color: darkblue;
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003A70;
         }
-        p {
-            color: red;
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
         }
-        section {
+        nav a:hover {
+            background-color: #00509E;
+        }
+        .container {
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
         }
-        .section1 {
-            background-color: yellow;
-        }
-        .section2 {
-            background-color: lightgreen;
-        }
-        .section3 {
-            background-color: lightcoral;
-        }
-        table {
+        footer {
+            background-color: #00509E;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            border-collapse: collapse;
+        }
+        #dialog {
+            display: none;
+        }
+        form {
             margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: lightgray;
         }
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Perpustakaan UNAIR</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#pemesanan">Pemesanan Buku</a></li>
-                <li><a href="#perpanjangan">Perpanjangan Buku</a></li>
-                <li><a href="#tabel">Tabel Bahan Buku</a></li>
-                <li><a href="#anggota">Anggota Perpustakaan</a></li>
-                <li><a href="#Pameran buku ">Pameran buku </a></li>
-            </ul>
-        </div>
+    <header>
+        <h1>Perpustakaan Universitas Airlangga</h1>
+        <p>Selamat datang di perpustakaan suka membaca!</p>
+    </header>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#katalog">Katalog Buku</a>
+        <a href="#pameranBuku">Pameran Buku</a>
+        <a href="#formulirAnggota">Formulir Anggota</a>
+        <a href="#kontak">Kontak</a>
     </nav>
 
-
-
-
-    <section id="home" class="section1">
-<head>
-<body>
-    <h1>Perpustakaan Universitas Airlangga</h1>
-</body>
-
-<body>
-  <h1>Perkenalan</h1>
-  <p>
-   Perkenalan Saya METHEWU MIKHA dengan Nim 222201015.ini adalah perpustakaan homepage pertama saya ,karena saya baru belajar tentang cara membuat website perpustakaan unair.berikut ini adalah gambar dari Gedung perpustakaan unair
+    <section id="beranda" class="container">
+        <h2>Beranda</h2>
+        <p> Perkenalan Saya METHEWU MIKHA dengan Nim 222201015.ini adalah perpustakaan homepage pertama saya ,karena saya baru belajar tentang cara membuat website perpustakaan unair.berikut ini adalah gambar dari Gedung perpustakaan unair
   <p>Untuk lebih lengkapnya website perpustakaan, silakan buka:
-            <a href="PERPUSTAKAAN UNAIR.html">website perpustakaan unair</a>
-        </p>
-
-</body>
-   <a href="#video">PERPUSTAKAAN UNAIR</a>
-  
-<head>
-    <title>PERPUSTAKAAN UNAIR</title>
-</head>
-<body>
-
-    <img src="perpus-depan.jpeg" alt="Logo perpustakaan">
-    <p>Perpustakaan UNAIR</p>
-
-</body>
-    <head>
-    <title>Video Perpustakaan UNAIR</title>
-</head>
-<body>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/aI94w6gCFzw?si=UCwT2HtAJdlTQdF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <a href="PERPUSTAKAAN UNAIR.html">website perpustakaan unair</a>.</p>
+        <img src="path/to/perpus-depan.jpeg" alt="Gambar Universitas Airlangga" style="width:100%; height:auto;">
+        <video width="100%" controls>
+            <source src="path/to/ height="315" src="https://www.youtube.com/embed/aI94w6gCFzw?si=UCwT2HtAJdlTQdF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <source src="video.mp4" type="video/mp4">
-
-    </video>
-</body>
-       <a href="#video">AUDIO</a>     
-<head>
-  <meta charset="UTF-8">
-  <title>Contoh Audio di HTML</title>
-</head>
-<body>
-  <h1>Audio</h1>
-  <audio controls>
-    <source src="town-10169.mp3 " type="audio/mpeg">
-    Browsermu tidak mendukung tag audio, upgrade donk!
-  </audio>
-</body>
-  </div>
-</div>
-    </p>  
-    <head>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body class="bg-gray-100">
-    <div class="flex flex-col items-center">
-        <div class="bg-gray-800 w-full py-8 text-center">
-            <h1 class="text-white text-2xl font-bold">Perpustakaan UNAIR</h1>
-        </div>
-        <div class="w-full max-w-md mt-4 px-4">
-            <input type="text" placeholder="Cari buku..." class="w-full p-2 border rounded-md">
-        </div>
-        <div class="w-full max-w-md mt-4 space-y-2 px-4">
-            <div class="bg-white p-4 rounded-md shadow-sm"> Air Mata  Manggar </div>
-            <div class="bg-white p-4 rounded-md shadow-sm"> aku beraksi tiada perempuan </div>
-            <div class="bg-white p-4 rounded-md shadow-sm"> angin pertama </div>
-            <div class="bg-white p-4 rounded-md shadow-sm"> antologi puisi secangkir teh untuk berdua </div>
-            <div class="bg-white p-4 rounded-md shadow-sm"> Air Mata  Manggar </div>
-            <div class="bg-white p-4 rounded-md shadow-sm"> aku beraksi tiada perempuan </div>
-        </div>
-    </div>
-    <div class="fixed bottom-0 w-full bg-white border-t">
-        <div class="flex justify-around py-2">
-            <a href="#" class="text-gray-600"><i class="fas fa-arrow-left"></i></a>
-            <a href="#" class="text-gray-600"><i class="fas fa-home"></i></a>
-            <a href="#" class="text-gray-600"><i class="fas fa-star"></i></a>
-            <a href="#" class="text-gray-600"><i class="fas fa-calendar-alt"></i></a>
-            <a href="#" class="text-gray-600"><i class="fas fa-bars"></i></a>
-        </div>
-    </div>
-</body>
-
-    </section>
-<section id="Pameran Buku" class="section 1">
-<header>
-        <h1>Pameran Buku 2024</h1>
-        <p>Bergabunglah dan temukan buku favoritmu!</p>
-    </header>
-
-    <section id="main-content" class="container">
-        <h2>Daftar Buku</h2>
-        <div class="book-card">
-            <img src="Air-Mata-Manggar-150x221.jpg" alt="Cover Buku 1">
-            <h3>Air Mata Manggar</h3>
-            <p>Arif Hidayat</p>
-            <p>menggambarkan kehidupan masyarakat Melayu di pesisir timur Sumatra, khususnya di daerah Manggar. Kisahnya menceritakan perjuangan masyarakat setempat menghadapi tantangan ekonomi, konflik sosial, dan hubungan antarmanusia yang penuh kompleksitas. Lewat karakter-karakter yang kuat dan latar cerita yang menggambarkan keindahan sekaligus kerasnya kehidupan pesisir, novel ini memberikan pandangan mendalam tentang nilai-nilai kebudayaan, ketabahan, dan solidaritas masyarakat yang berjuang di tengah berbagai keterbatasan.</p>
-        </div>
-        <div class="book-card">
-            <img src="Aku-Beraksi-Tiada-Perempuan-Selain-Engkau-150x214.jpg" alt="Cover Buku 2">
-            <h3>aku Beraksi Tiada Perempuan selain engkau </h3>
-            <p>Penulis: Nizar Qabbani </p>
-            <p> menyajikan kisah romansa penuh emosional dan kompleksitas hubungan. Novel ini mengisahkan tokoh utama yang terjebak dalam perasaan mendalam terhadap seorang perempuan, yang ia anggap sebagai satu-satunya cinta sejati. Dengan alur cerita yang menggugah, pembaca diajak menyelami dilema, perjuangan, dan pengorbanan yang dialami tokoh dalam memperjuangkan cinta di tengah berbagai konflik dan rintangan. Lewat bahasa yang puitis, novel ini menyoroti makna kesetiaan dan cinta yang tulus dalam kehidupan manusia. </p>
-        </div>
-        <div class="book-card">
-            <img src="Angin-Pertama-150x203.jpg" alt="Cover Buku 3">
-            <h3> Angin Pertama </h3>
-            <p>Penulis: Kim Al Ghozali AM </p>
-            <p> menggambarkan kehidupan masyarakat di desa nelayan kecil di Indonesia. Novel ini berfokus pada seorang anak muda bernama Tohir yang penuh semangat dan idealisme, namun harus menghadapi kerasnya hidup serta konflik sosial dan politik di sekitarnya. Tohir ingin membawa perubahan dan keadilan bagi desanya, tetapi perjuangannya terhambat oleh berbagai tantangan, termasuk ketidakadilan dan kemiskinan. Dengan gaya bahasa yang tajam, Angin Pertama menggambarkan ketegangan antara harapan dan kenyataan dalam masyarakat serta kritik terhadap situasi sosial dan moral pada masanya. </p>
-        </div>
-        <div class="book-card">
-            <img src=" Antologi-Puisi-Secangkir-Teh-untuk-Berdua-150x216.png " alt="Cover Buku 4">
-            <h3> Antologi Puisi Secangkir Teh-untuk Berdua </h3>
-            <p>Penulis: Warastri Kurniati </p>
-            <p> kumpulan puisi karya Joko Pinurbo yang menghadirkan refleksi mendalam tentang cinta, kehidupan sehari-hari, dan berbagai momen sederhana yang penuh makna. Melalui gaya bahasa yang lembut dan puitis, buku ini membawa pembaca pada perjalanan emosional—baik kebahagiaan maupun kesedihan—dalam keseharian yang akrab namun penuh renungan. Setiap puisi seolah-olah mengajak pembaca untuk duduk bersama, menikmati secangkir teh, dan meresapi perasaan dalam keheningan, menghadirkan keintiman yang mendalam dalam kesederhanaan. </p>
-        </div>
-
+            Browser Anda tidak mendukung video tag.
+        </video>
+        <audio controls>
+            <source src="path/to/ town-10169.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung audio tag.
+        </audio>
     </section>
 
-
-</body>
-           <section id="anggota" class="section2">
-            <section id="Formulir Anggota Perpustakaan" class="section3">
-<body>
-<table border="1">
-<tr>
-<body>
-    <h1>Formulir Anggota Perpustakaan</h1>
-</body>
-
-<body>
-
-<tr>
-<td>Nama Lengkap</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-<tr>
-<td>NIM</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-<tr>
-<td>e-Alamat</td>
-<td>:</td>
-<td><textarea cols="22" rows="3" ></textarea></td>
-</tr>
-
-<tr>
-<td>Jenis Kelamin</td>
-<td>:</td>
-<td><input type="radio" name='jenis_kelamin' value='pria'/>Pria
-<input type="radio" name='jenis_kelamin' value='perempuan'/>Perempuan</td>
-</tr>
-
-<tr>
-<td>Email</td>
-<td>:</td>
-<td><input type="email"></td>
-</tr>
-
-<tr>
-<td>No.hp</td>
-<td>:</td>
-<td><input type="numer"></td>
-</tr>
-
-<tr>
-<td>Tempat Lahir</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-<tr>
-<td>Tanggal lahir</td>
-<td>:</td>
-<td><input type="Date"></td>
-</tr>
-
-
-
-<tr>
-<td>Kota</td>
-<td>:</td>
-<td><select>
-<option>*****SELECT KOTA*****</option>
-<option>Bogor</option>
-<option>Jakarta</option>
-<option>Bekasi</option>
-<option>Tangerang</option>
-<option>Depok</option>
-<option>cikarang</option>
-<option>Banten</option>
-</select></td>
-</tr>
-
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="submit" value="Simpan"/>
-<input type="reset" name="reset" value="Batal" /></td>
-</tr>
-
-</table> 
-     </form>
-    </section>
-
-
-
-
-
-
-</table>
-  <section id="tabel" class="section1">          
-<body>
-<table border="1">
-<tr>
-<body>
-    <h1>Tabel Bahan Buku</h1>
-</body>
-
-<body>
-<th> Judul Buku</th>
-<th>Pengarang</th>
-<th>Penerbit</th>
-<th>tahun terbit</th>
-<th>jumlah halaman</th>
-<th>ISBN</th>
-</tr>
-<tr>
-<td>Family Business : from ABC to MBA edisi 2 </td>
-<td>Daud Tjondrorahardja
-</td>
-<td>Yogyakarta </td>
-<td> 2021</td>
-<td> 75</td>
-<td> 9786236476055</td>
-
-</tr>
-<tr>
-<d></td>
-<td>Maqashid ekonomi syariah : tujuan dan aplikasi
-</td>
-<td> Moh. Mufid
-</td>
-<td> Malang : Empatdua Media
-</td>
+    <section id="katalog" class="container">
+        <h2>Katalog Buku</h2>
+        <table id="Table buku" class="display">
+            <thead>
+                <tr>
+                    <th>Family Business : from ABC to MBA edisi 2</th>
+                    <th>Daud Tjondrorahardja</th>
+                    <th>Yogyakarta</th>
+	        <th> 2021</th>
+<th> 75</th>
+<th> 9786236476055</th>
+   </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maqashid ekonomi syariah : tujuan dan aplikasi</td>
+                    <td>Moh. Mufid</td>
+                    <td>Empatdua Media</td>
 <td>2018</td>
 <td>216</td>
 <td>9786025192753</td>
-
-
-</tr>
-<tr>
-<d></td>
+                </tr>
+                <tr>
 <td>Evaluasi calon mudharib untuk pembiayaan mudharabah</td>
 <td> Hendry Herijanto Oejoen Dt. Rajo Hitam</td>
 <td>Salemba Empat </td>
 <td>2023</td>
 <td>310</td>
-<td>9786231810427</td>
-
-
-</tr>
-
-<tr>
+<td>9786231810427</td>              
+  </tr>
+    <tr>
 <td>Politik ekonomi Indonesia : lanskap dan dinamika kontemporer </td>
 <td>Asmiati Abdul Malik </td>
 <td>Intrans Publishing </td>
 <td>2020 </td>
 <td>296 </td>
-<td>9786236709030 </td>
-
-
-
-
-</tr>
-</tr>
+<td>9786236709030 </td>            
+    </tr>
 <tr>
-<d></td>
 <td>Tata kelola sistem inovasi nasional </td>
 <td>Prakoso Bhairawa Putera  </td>
 <td>LIPI Press </td>
 <td>2014</td>
 <td>232</td>
 <td>9789797997915</td>
-
-
-</table>
-    </section>
-    
-<section id="pemesanan" class="section2">
-<body>
-<table border="1">
-<tr>
-<body>
-    <h1>Formulir Pemesanan Buku</h1>
-</body>
-
-<body>
-
-<tr>
-<td>Nama Lengkap</td>
-<td>:</td>
-<td><input type="text"></td>
 </tr>
 
-<tr>
-<td>Nomor Anggota Perpustakaan</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-<tr>
-<td>e-mail</td>
-<td>:</td>
-<td><textarea cols="22" rows="3" ></textarea></td>
-</tr>
-
-<tr>
-<td>Jenis Kelamin</td>
-<td>:</td>
-<td><input type="radio" name='jenis_kelamin' value='pria'/>Pria
-<input type="radio" name='jenis_kelamin' value='perempuan'/>Perempuan</td>
-</tr>
-<tr>
-<td>No.hp</td>
-<td>:</td>
-<td><input type="numer"></td>
-</tr>
-
-<tr>
-     <th colspan="3">Detail Pemesanan</th>
-        </tr>
-
-<body>
-<td>judul buku</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-<td>Penulis Buku</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-<td>Nomor ISBN</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-<td>Tanggal Pemesanan</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="submit" value="Simpan"/>
-<input type="reset" name="reset" value="Batal" /></td>
-</tr>
-
-</table>
-</form>
+            </tbody>
+        </table>
     </section>
 
+    <section id="pameranBuku" class="container">
+        <h2>Pameran Buku</h2>
+        <p>Pameran buku terbaru  di perpustakaan kami.</p>
+        <img src="path/to/ Air-Mata-Manggar-150x221.jpg " alt="Pameran Buku" style="width:100%; height:auto;">
+<img src="path/to/ Aku-Beraksi-Tiada-Perempuan-Selain-Engkau-150x214.jpg" alt="Pameran Buku" style="width:100%; height:auto;">
+<img src="path/to/ Angin-Pertama-150x203.jpg" alt="Pameran Buku" style="width:100%; height:auto;">
+  <img src="path/to/ Antologi-Puisi-Secangkir-Teh-untuk-Berdua-150x216.png" alt="Pameran Buku" style="width:100%; height:auto;">        
+        </section>
 
-
-</table>
-     <section id="perpanjangan" class="section3">
-<table>
-<tr>
-<body>
-<table border="1">
-<tr>
-<body>
-    <h1>Formulir Perpanjangan  Peminjaman Buku</h1>
-</body>
-
-<body>
-
-<tr>
-<td>Nama Lengkap</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-<tr>
-<td> Nomor Anggota Perpustakaan </td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-<tr>
-<td>Tanggal Peminjaman </td>
-<td>:</td>
-<td><textarea cols="22" rows="3" ></textarea></td>
-</tr>
-
-<tr>
-<td>email</td>
-<td>:</td>
-<td><input type="email"></td>
-
-</tr>
-
-
-<tr>
-<td>No.hp</td>
-<td>:</td>
-<td><input type="numer"></td>
-</tr>
-
-<tr>
-<td>No ISBN</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-<tr>
-<td>Tanggal Perpanjangan Buku</td>
-<td>:</td>
-<td><input type="text"></td>
-</tr>
-
-
-
-
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="submit" value="Simpan"/>
-<input type="reset" name="reset" value="Batal" /></td>
-</tr>
-
-    </body>
-            </form>
+    <section id="formulirAnggota" class="container">
+        <h2>Formulir Pendaftaran Anggota Perpustakaan</h2>
+        <form id="formAnggota">
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="nomorTelp">Nomor Telepon:</label><br>
+            <input type="tel" id="nomorTelp" name="nomorTelp"><br><br>
+            <button type="submit">Daftar</button>
+        </form>
     </section>
 
-<head>
-<style>
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
-</style>
-</head>
+    <section id="kontak" class="container">
+        <h2>Kontak Kami</h2>
+        <p>Alamat: Jalan Kampus UNAIR, Surabaya</p>
+        <p>Email: perpustakaan@unair.ac.id</p>
+        <p>Telepon: (031) 123-4567</p>
+        <button id="btnContact">Buka Dialog Kontak</button>
+    </section>
 
-   
-<body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <div id="dialog" title="Kontak Kami">
+        <p>Jika Anda memerlukan bantuan, silakan hubungi kami di alamat dan nomor yang tercantum.</p>
+    </div>
+
+    <section id="formulirPemesananBuku" class="container">
+        <h2>Formulir Pemesanan Buku</h2>
+        <form id="formPemesananBuku">
+            <label for="judulBuku">Judul Buku:</label><br>
+            <input type="text" id="judulBuku" name="judulBuku"><br><br>
+            <label for="namaPeminjam">Nama Peminjam:</label><br>
+            <input type="text" id="namaPeminjam" name="namaPeminjam"><br><br>
+            <button type="submit">Pesan Buku</button>
+        </form>
+    </section>
+
+    <section id="formulirPerpanjangan" class="container">
+        <h2>Formulir Perpanjangan Peminjaman Buku</h2>
+        <form id="formPerpanjangan">
+            <label for="judulBukuPerpanjangan">Judul Buku:</label><br>
+            <input type="text" id="judulBukuPerpanjangan" name="judulBukuPerpanjangan"><br><br>
+            <label for="namaPeminjamPerpanjangan">Nama Peminjam:</label><br>
+            <input type="text" id="namaPeminjamPerpanjangan" name="namaPeminjamPerpanjangan"><br><br>
+            <button type="submit">Perpanjang</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Perpustakaan Universitas Airlangga</p>
+    </footer>
+
+    <!-- jQuery dan Plugin jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Inisialisasi DataTables
+            $('#katalogTable').DataTable();
+
+            // Membuat dialog jQuery UI untuk kontak
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Tutup": function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            // Membuka dialog ketika tombol diklik
+            $("#btnContact").click(function() {
+                $("#dialog").dialog("open");
+            });
+        });
+    </script>
 </body>
-
-  
- 
- 
 </html>
+
 
 
