@@ -25,3 +25,36 @@
         <p>Telepon: (031) 123-4567</p>
         <button id="btnContact">Buka Dialog Kontak</button>
     </section>
+    <footer>
+        <p>&copy; 2024 Perpustakaan Universitas Airlangga</p>
+    </footer>
+
+    <!-- jQuery dan Plugin jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Inisialisasi DataTables
+            $('#katalogTable').DataTable();
+
+            // Membuat dialog jQuery UI untuk kontak
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Tutup": function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            // Membuka dialog ketika tombol diklik
+            $("#btnContact").click(function() {
+                $("#dialog").dialog("open");
+            });
+        });
+    </script>
+</body>
+</html>
