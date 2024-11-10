@@ -1,35 +1,61 @@
 <?php
 session_start();
-
-// Include file untuk koneksi ke database
-include('config.php');
-
-// Cek apakah form login disubmit
-if (isset($_POST['submit'])) {
-    // Ambil data dari form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Query untuk mencari username dalam database
-    $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-
-    // Cek apakah username ditemukan
-    if (mysqli_num_rows($result) > 0) {
-        $user = mysqli_fetch_assoc($result);
-
-        // Verifikasi kata sandi
-        if (password_verify($password, $user['password'])) {
-            // Set session jika login berhasil
-            $_SESSION['username'] = $user['username'];
-            header('Location: dashboard.php'); // Redirect ke halaman dashboard
-            exit();
-        } else {
-            echo "<script>alert('Kata sandi salah!');</script>";
-        }
-    } else {
-        echo "<script>alert('Nama pengguna tidak ditemukan!');</script>";
-    }
-}
 ?>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+	<title>Login Admin jualan</title>
+</head>
+<body>
+	<div class="container">
+			
+
+		<div class="row">
+			<div class="col-md-4 offset-md-4 mt-5">
+				
+
+				<?php
+				if(isset($_SESSION['error'])) {
+				?>
+				<div class="alert alert-warning" role="alert">
+				  <?php echo $_SESSION['error']?>
+				</div>
+				<?php
+				}
+				?>
+				
+				<div class="card ">
+					<div class="card-title text-center">
+						<h1>Login Admin</h1>
+					</div>
+					<div class="card-body">
+						<form action="process.php" method="post">
+							<div class="form-group">
+								<label for="username">Nama Admin</label>
+								<input type="text" name="username" class="form-control" id="username" aria-describedby="username" placeholder="Nama Admin">
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input type="password" name="password" class="form-control" id="password" placeholder="Password">
+							</div>
+							<button type="submit" class="btn btn-primary">Masuk</button>
+						</form>
+					</div>
+				</div>
+				<br>
+				<ul class="nav">
+					<li class="nav-item">
+					<a href="index.hml" class="btn btn-sm btn-primary float-right"><=Kembali</a>
+					</li>
+				</ul>
+				<br>
+			</div>
+
+		</div>
+
+	</div>
+</body>
