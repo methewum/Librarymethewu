@@ -1,0 +1,149 @@
+ 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perpustakaan UNAIR</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("picture/09528de6b7772c6ae081a2ee382e7eab.jpg");
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #FFD700;
+            text-align: center;
+            text-decoration: underline;
+        }
+        h2 {
+            color: #FFD700;
+            text-align: center;
+        }
+        section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Menyelaraskan kolom ke tengah */
+        }
+
+        .book {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 10px; /* Margin antar buku */
+            text-align: center;
+            transition: transform 0.3s;
+            flex: 1 1 30%; /* Memastikan lebar yang sama untuk buku */
+            min-width: 250px; /* Batas lebar minimum */
+            max-width: 350px; /* Batas lebar maksimum */
+            height: 450px; /* Tinggi konsisten */
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+            max-height: 250px; /* Meningkatkan tinggi maksimum gambar */
+            object-fit: cover;
+        }
+
+        h3, p {
+            color: black;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<section id="gallery" class="container">
+    <h2 class="text-center">Galeri Buku</h2>
+    <div class="row" id="book-gallery"></div>
+</section>
+
+<div class="footer">
+    <p>&copy; 2024 Perpustakaan UNAIR. Semua hak dilindungi.</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+  const books = [
+    {
+<img src="Air-Mata-Manggar-150x221.jpg" alt="Cover Buku 1">
+            <h3>Air Mata Manggar</h3>
+            <p>Arif Hidayat</p>
+            <p>menggambarkan kehidupan masyarakat Melayu di pesisir timur Sumatra, khususnya di daerah Manggar. Kisahnya menceritakan perjuangan masyarakat setempat menghadapi tantangan ekonomi, konflik sosial, dan hubungan antarmanusia yang penuh kompleksitas. Lewat karakter-karakter yang kuat dan latar cerita yang menggambarkan keindahan sekaligus kerasnya kehidupan pesisir, novel ini memberikan pandangan mendalam tentang nilai-nilai kebudayaan, ketabahan, dan solidaritas masyarakat yang berjuang di tengah berbagai keterbatasan.</p>
+          },
+    {
+<img src="Aku-Beraksi-Tiada-Perempuan-Selain-Engkau-150x214.jpg" alt="Cover Buku 2">
+            <h3>aku Beraksi Tiada Perempuan selain engkau </h3>
+            <p>Penulis: Nizar Qabbani </p>
+            <p> menyajikan kisah romansa penuh emosional dan kompleksitas hubungan. Novel ini mengisahkan tokoh utama yang terjebak dalam perasaan mendalam terhadap seorang perempuan, yang ia anggap sebagai satu-satunya cinta sejati. Dengan alur cerita yang menggugah, pembaca diajak menyelami dilema, perjuangan, dan pengorbanan yang dialami tokoh dalam memperjuangkan cinta di tengah berbagai konflik dan rintangan. Lewat bahasa yang puitis, novel ini menyoroti makna kesetiaan dan cinta yang tulus dalam kehidupan manusia. </p>
+         },
+    {
+<img src="Angin-Pertama-150x203.jpg" alt="Cover Buku 3">
+            <h3> Angin Pertama </h3>
+            <p>Penulis: Kim Al Ghozali AM </p>
+            <p> menggambarkan kehidupan masyarakat di desa nelayan kecil di Indonesia. Novel ini berfokus pada seorang anak muda bernama Tohir yang penuh semangat dan idealisme, namun harus menghadapi kerasnya hidup serta konflik sosial dan politik di sekitarnya. Tohir ingin membawa perubahan dan keadilan bagi desanya, tetapi perjuangannya terhambat oleh berbagai tantangan, termasuk ketidakadilan dan kemiskinan. Dengan gaya bahasa yang tajam, Angin Pertama menggambarkan ketegangan antara harapan dan kenyataan dalam masyarakat serta kritik terhadap situasi sosial dan moral pada masanya. </p>
+          },
+    {
+        title: "Ekologi Hewan",
+        image: "picture/createthumb (2).jpeg",
+        description: "Pengarang: Sipayung, Mariaty"
+    },
+    {
+        title: "Antologi Puisi Secangkir Teh-untuk Berdua ",
+        image: "Antologi-Puisi-Secangkir-Teh-untuk-Berdua-150x216.png",
+        description: "Warastri Kurniati"
+    }
+];
+
+const gallery = document.getElementById("book-gallery");
+
+books.forEach(book => {
+    const colDiv = document.createElement("div");
+    colDiv.classList.add("col-xs-12", "col-sm-6", "col-md-4");
+
+    const bookDiv = document.createElement("div");
+    bookDiv.classList.add("book");
+
+    bookDiv.innerHTML = `
+        <img src="${book.image}" alt="${book.title}">
+        <h3>${book.title}</h3>
+        <p>${book.description}</p>
+    `;
+
+    colDiv.appendChild(bookDiv);
+    gallery.appendChild(colDiv);
+});
+</script>
+</body>
+</html>
