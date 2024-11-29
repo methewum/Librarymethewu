@@ -52,19 +52,37 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Perpustakaan Universitas Airlangga</h1>
-        <p>Selamat datang di perpustakaan suka membaca!</p>
-    </header>
-    <nav>
-        <a href="login (6).php">Login</a>
-        <a href="#beranda">Beranda</a>
-        <a href="#katalog">Katalog Buku</a>
-        <a href="#pameranBuku">Pameran Buku</a>
-        <a href="#formulirAnggota">Formulir Anggota</a>
-        <a href="#kontak">Kontak</a>
-        <a href="#modul">modul</a>
-    </nav>
+
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Perpustakaan UNAIR</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbarNav" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="media.html">Media</a></li> 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Buku <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="pemesanan.html">Pemesanan Buku</a></li>
+                        <li><a href="perpanjangan.html">Perpanjangan Buku</a></li>
+                        <li><a href="tabel-buku.html">Tabel Bahan Buku</a></li>
+                        <li><a href="pameran.html">Pameran Buku</a></li>
+                        <li><a href="pencarian.html">Pencarian</a></li>
+                    </ul>
+                </li>
+                <li><a href="anggota.html">Anggota Perpustakaan</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
     <section id="beranda" class="container">
 <head>
