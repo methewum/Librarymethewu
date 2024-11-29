@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar PHP</title>
+</head>
+<body>
+    <ol>
+        <?php
+        for ($i = 1; $i <= 1000; $i++) {
+            echo "<li>Ini adalah hari ke-$i belajar PHP</li>";
+        }
+        ?>
+    </ol>
+</body>
 
+<head>
+    <title>Operasi Matematika</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="number" name="angka1" placeholder="Angka 1" required>
+        <input type="number" name="angka2" placeholder="Angka 2" required>
+        <select name="operator">
+            <option value="tambah">Tambah</option>
+            <option value="kurang">Kurang</option>
+            <option value="kali">Kali</option>
+            <option value="bagi">Bagi</option>
+        </select>
+        <button type="submit" name="hitung">Hitung</button>
+    </form>
+
+    <?php
+    if (isset($_POST['hitung'])) {
+        $angka1 = $_POST['angka1'];
+        $angka2 = $_POST['angka2'];
+        $operator = $_POST['operator'];
+
+        switch ($operator) {
+            case 'tambah':
+                $hasil = $angka1 + $angka2;
+                break;
+            case 'kurang':
+                $hasil = $angka1 - $angka2;
+                break;
+            case 'kali':
+                $hasil = $angka1 * $angka2;
+                break;
+            case 'bagi':
+                $hasil = $angka1 / $angka2;
+                break;
+        }
+
+        echo "<p>Hasil: $hasil</p>";
+    }
+    ?>
+</body>
+
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" name="login">Login</button>
+    </form>
+
+    <?php
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        // Username dan password yang valid
+        $valid_username = "admin";
+        $valid_password = "1234";
+
+        if (empty($username) || empty($password)) {
+            echo "<p>Input tidak lengkap</p>";
+        } elseif ($username === $valid_username && $password === $valid_password) {
+            echo "<p>Login sukses</p>";
+        } else {
+            echo "<p>Login gagal</p>";
+        }
+    }
+    ?>
+</body>
+</html>
+</html>
