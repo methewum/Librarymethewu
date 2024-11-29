@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <section id="modul" class="container">
     <title>Belajar PHP</title>
 </head>
 <body>
