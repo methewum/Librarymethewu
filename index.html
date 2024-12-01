@@ -6,62 +6,72 @@
     <title>Perpustakaan UNAIR</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
             background-image: url("WhatsApp Image 2024-11-29 at 19.34.04.jpeg");
             background-size: cover;
+            background-attachment: fixed;
             color: white;
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
+
+        /* Navbar Styles */
         .navbar-default .navbar-brand {
-    color: red; 
-}
+            color: #ff4500; /* Warna lebih lembut */
+        }
 
-.navbar-default .navbar-nav > li > a {
-    color: green; 
-}
+        .navbar-default .navbar-nav > li > a {
+            color: #32cd32; /* Warna hijau lembut */
+        }
 
-.navbar-default .navbar-nav > li > a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: yellow; 
-}
+        .navbar-default .navbar-nav > li > a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: yellow;
+        }
+
+        /* Section Styling */
+        h1, h2 {
+            color: #32cd32;
+            text-align: center;
+        }
 
         h1 {
-            color: #008000;
-            text-align: center;
             text-decoration: underline;
         }
-        h2 {
-            color: #008000;
-            text-align: center;
-        }
+
         section {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            margin: 20px 0;
+            margin: 20px;
             border-radius: 10px;
-            color: white;
         }
+
+        /* Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
+
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
         }
+
         th {
             background-color: #444;
             color: #fff;
         }
+
+        /* Footer Styling */
         .footer {
             text-align: center;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
-            color: red;
+            color: #ffa500; /* Warna oranye */
             position: relative;
             bottom: 0;
             width: 100%;
@@ -70,12 +80,11 @@
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Perpustakaan UNAIR</a>
-
-            
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -85,9 +94,11 @@
         <div id="navbarNav" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#home">Beranda</a></li>
-                <li><a href="media.html">Media</a></li> 
+                <li><a href="media.html">Media</a></li>
                 <li class="dropdown">
-                    <a href="#"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">buku <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Buku <span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="pemesanan.html">Pemesanan Buku</a></li>
                         <li><a href="perpanjangan.html">Perpanjangan Buku</a></li>
@@ -102,18 +113,19 @@
     </div>
 </nav>
 
-
-
+<!-- Main Section -->
 <section id="home">
     <h1>Perpustakaan UNAIR</h1>
     <h2>Selamat Datang di Web Perpustakaan SUKA MEMBACA</h2>
-   <center>
-    <p style="color:#FFD700;">METHEWU MIKHA 222201015 <i>web</i> ini adalah web pertama saya, saya baru belajar tentang cara membuat <a href="https://lib.unair.ac.id//">website perpustakaan unair</a>.</p>
-   </center>
-    
-
+    <center>
+        <p style="color:#FFD700;">
+            METHEWU MIKHA 222201015 <i>web</i> ini adalah web pertama saya, saya baru belajar tentang cara membuat 
+            <a href="https://lib.unair.ac.id/" style="color: #00FFFF;">website perpustakaan UNAIR</a>.
+        </p>
+    </center>
 </section>
 
+<!-- Footer -->
 <div class="footer">
     <p>&copy; 2024 Perpustakaan METHEWU MIKHA. Semua hak dilindungi.</p>
 </div>
