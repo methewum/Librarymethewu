@@ -18,6 +18,20 @@
             padding: 0;
         }
 
+        /* Navbar Styles */
+        .navbar-default .navbar-brand {
+            color: #ff4500; /* Warna lebih lembut */
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: #32cd32; /* Warna hijau lembut */
+        }
+
+        .navbar-default .navbar-nav > li > a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: yellow;
+        }
+
         /* Section Styling */
         h1, h2 {
             color: #32cd32;
@@ -35,12 +49,29 @@
             border-radius: 10px;
         }
 
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #444;
+            color: #fff;
+        }
+
         /* Footer Styling */
         .footer {
             text-align: center;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
-            color: #ffa500;
+            color: #ffa500; /* Warna oranye */
             position: relative;
             bottom: 0;
             width: 100%;
@@ -54,13 +85,29 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Perpustakaan UNAIR</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
         <div id="navbarNav" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#home">Beranda</a></li>
-                <li><a href="#php">Belajar PHP</a></li>
-                <li><a href="#math">Operasi Matematika</a></li>
-                <li><a href="#login">Login</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Buku <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="pemesanan.html">Pemesanan Buku</a></li>
+                        <li><a href="perpanjangan.html">Perpanjangan Buku</a></li>
+                        <li><a href="tabel-buku.html">Tabel Bahan Buku</a></li>
+                        <li><a href="pameran.html">Pameran Buku</a></li>
+                        <li><a href="pencarian.html">Pencarian</a></li>
+                    </ul>
+                </li>
+                <li><a href="anggota.html">Anggota Perpustakaan</a></li>
             </ul>
         </div>
     </div>
@@ -69,88 +116,13 @@
 <!-- Main Section -->
 <section id="home">
     <h1>Perpustakaan UNAIR</h1>
-    <h2>Selamat Datang di Web Perpustakaan</h2>
+    <h2>Selamat Datang di Web Perpustakaan SUKA MEMBACA</h2>
     <center>
         <p style="color:#FFD700;">
-            METHEWU MIKHA 222201015 <i>web</i> ini adalah web pertama saya.
+            METHEWU MIKHA 222201015 <i>web</i> ini adalah web pertama saya, saya baru belajar tentang cara membuat 
+            <a href="https://lib.unair.ac.id/" style="color: #00FFFF;">website perpustakaan UNAIR</a>.
         </p>
     </center>
-</section>
-
-<!-- Belajar PHP -->
-<section id="php">
-    <h2>Belajar PHP</h2>
-    <ol>
-        <?php
-        for ($i = 1; $i <= 10; $i++) { // Batasi jumlah untuk tampilan
-            echo "<li>Ini adalah hari ke-$i belajar PHP</li>";
-        }
-        ?>
-    </ol>
-</section>
-
-<!-- Operasi Matematika -->
-<section id="math">
-    <h2>Operasi Matematika</h2>
-    <form method="POST">
-        <input type="number" name="angka1" placeholder="Angka 1" required>
-        <input type="number" name="angka2" placeholder="Angka 2" required>
-        <select name="operator">
-            <option value="tambah">Tambah</option>
-            <option value="kurang">Kurang</option>
-            <option value="kali">Kali</option>
-            <option value="bagi">Bagi</option>
-        </select>
-        <button type="submit" name="hitung">Hitung</button>
-    </form>
-    <?php
-    if (isset($_POST['hitung'])) {
-        $angka1 = $_POST['angka1'];
-        $angka2 = $_POST['angka2'];
-        $operator = $_POST['operator'];
-        $hasil = 0;
-
-        switch ($operator) {
-            case 'tambah':
-                $hasil = $angka1 + $angka2;
-                break;
-            case 'kurang':
-                $hasil = $angka1 - $angka2;
-                break;
-            case 'kali':
-                $hasil = $angka1 * $angka2;
-                break;
-            case 'bagi':
-                $hasil = $angka1 / $angka2;
-                break;
-        }
-        echo "<p>Hasil: $hasil</p>";
-    }
-    ?>
-</section>
-
-<!-- Login -->
-<section id="login">
-    <h2>Login</h2>
-    <form method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit" name="login">Login</button>
-    </form>
-    <?php
-    if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $valid_username = "admin";
-        $valid_password = "1234";
-
-        if ($username === $valid_username && $password === $valid_password) {
-            echo "<p>Login sukses</p>";
-        } else {
-            echo "<p>Login gagal</p>";
-        }
-    }
-    ?>
 </section>
 
 <!-- Footer -->
@@ -161,5 +133,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
-</html>
+</html>  
 
