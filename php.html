@@ -1,58 +1,17 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar PHP: Angka 1-1000</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #0056b3;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #007bff;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
+    <title>Belajar JavaScript</title>
 </head>
 <body>
-    <h1>Menampilkan Angka 1-1000</h1>
+    <div id="list"></div>
 
-<script>
-    for (let i = 1; i <= 1000; i++) {
-    const dayItem = document.createElement('div');
-    dayItem.classList.add('day-item');
-    dayItem.textContent = `Ini adalah hari ke-${i} belajar PHP`;
-    container.appendChild(dayItem);
-    }
-</script>
+    <script>
+        let output = '';
+        for (let i = 1; i <= 1000; i++) {
+            output += i + '. Ini adalah hari ke-' + i + ' belajar PHP<br>';
+        }
+        document.getElementById('list').innerHTML = output;
+    </script>
 </body>
 </html>
-
